@@ -1,10 +1,17 @@
 import os
 import re
+import streamlit as st
 from dotenv import load_dotenv
 import google.generativeai as genai
 
-load_dotenv()
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+# Load API key from env or Streamlit secrets
+if "GOOGLE_API_KEY" in st.secrets:
+    api_key = st.secrets["GOOGLE_API_KEY"]
+else:
+    load_dotenv()
+    api_key = os.getenv("GOOGLE_API_KEY")
+
+genai.configure(api_key=api_key)
 
 def extract_number_of_days(text):
     text = text.lower()
@@ -52,14 +59,26 @@ def generate_tasks(goal):
         f"(Continue this pattern for all days. Each 'Day n:' block must be separated by a blank line.)"
     )
 
+    st.info(f"Generating a {days}-day plan with Gemini Flash 1.5 for: {goal}")
+    print("Gemini prompt:", prompt)
     try:
-        model = genai.GenerativeModel("gemini-1.5-flash-002")
+        model = genai.GenerativeModel("gemini-1.5-flash-latest")
         response = model.generate_content(prompt)
         content = response.text.strip()
-        # Split on 'Day {n}:' using regex
+        print("Gemini response received.")
+        # Split on double newlines to get day blocks
         blocks = re.split(r'\n\s*\n', content)
         blocks = [b.strip() for b in blocks if b.strip()]
+        st.success(f"Plan generated! ({len(blocks)} days)")
         return blocks[:days]
     except Exception as e:
+        st.error(f"Error generating tasks: {e}")
         print("Error generating tasks:", e)
-        return [f"Day {i+1}:\n- Placeholder task" for i in range(min(days,7))]
+        return [f"Day {i+1}:\n- Placeholder task" for i in range(min(days, 7))]
+
+# Test locally
+if __name__ == "__main__":
+    test_goal = "I want to crack a data analyst job in 1 month"
+    tasks = generate_tasks(test_goal)
+    for t in tasks:
+        print(t)

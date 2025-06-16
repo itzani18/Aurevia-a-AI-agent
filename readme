@@ -1,0 +1,46 @@
+#replace this when you want to run locally
+"""def get_daywise_chunks(tasks, motivation):
+                chunks = []
+                for task in tasks:
+                    if task.strip():
+                        chunks.append(task.strip())
+                if motivation:
+                    chunks.append("Motivation: " + motivation)
+                return chunks
+
+            if "voice_playing" not in st.session_state:
+                st.session_state.voice_playing = False
+
+            daywise_chunks = get_daywise_chunks(chat_data['tasks'], chat_data['motivation'])
+
+            def read_plan_all_days():
+                st.session_state.voice_playing = True
+                for i, chunk in enumerate(daywise_chunks):
+                    if not st.session_state.voice_playing:
+                        break
+                    filename = f"aurevia_plan_day{i+1}.mp3"
+                    speak_plan(chunk, voice_id="cA7uzZlCjwGEkoIQu7gK", filename=filename)
+                    # Wait for this audio to finish before starting next
+                    import pygame
+                    while pygame.mixer.music.get_busy():
+                        if not st.session_state.voice_playing:
+                            pygame.mixer.music.stop()
+                            break
+                        pygame.time.Clock().tick(10)
+            def stop_voice():
+                st.session_state.voice_playing = False
+                stop_audio()
+
+            col1, col2 = st.columns(2)
+            if not st.session_state.voice_playing:
+                with col1:
+                    if st.button("🔊 Read Out Plan"):
+                        st.session_state.voice_playing = True
+                        import threading
+                        thread = threading.Thread(target=read_plan_all_days)
+                        thread.start()
+            if st.session_state.voice_playing:
+                with col2:
+                    if st.button("⏹️ Stop Voice"):
+                        stop_voice()
+                        st.success("Voice stopped.")"""

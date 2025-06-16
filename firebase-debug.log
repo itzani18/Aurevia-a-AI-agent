@@ -1,0 +1,79 @@
+[debug] [2025-06-13T06:29:38.923Z] ----------------------------------------------------------------------
+[debug] [2025-06-13T06:29:38.924Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\choud\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2025-06-13T06:29:38.925Z] CLI Version:   14.7.0
+[debug] [2025-06-13T06:29:38.925Z] Platform:      win32
+[debug] [2025-06-13T06:29:38.925Z] Node Version:  v22.13.0
+[debug] [2025-06-13T06:29:38.925Z] Time:          Fri Jun 13 2025 11:59:38 GMT+0530 (India Standard Time)
+[debug] [2025-06-13T06:29:38.925Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-06-13T06:29:38.930Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-06-13T06:29:38.930Z] > authorizing via signed-in user (choudharyitzaniket123@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\Projects\ai agent\Future-self planner
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2025-06-13T06:30:43.089Z] Checked if tokens are valid: true, expires at: 1749799749868
+[debug] [2025-06-13T06:30:43.089Z] Checked if tokens are valid: true, expires at: 1749799749868
+[debug] [2025-06-13T06:30:43.090Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2025-06-13T06:30:43.990Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2025-06-13T06:30:43.990Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project avid-stratum-458105-m6 (Aurevia) 
+[info] 
+=== Functions Setup
+[debug] [2025-06-13T06:30:47.069Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-06-13T06:30:47.069Z] > authorizing via signed-in user (choudharyitzaniket123@gmail.com)
+[debug] [2025-06-13T06:30:47.069Z] [iam] checking project avid-stratum-458105-m6 for permissions ["firebase.projects.get"]
+[debug] [2025-06-13T06:30:47.069Z] Checked if tokens are valid: true, expires at: 1749799749868
+[debug] [2025-06-13T06:30:47.069Z] Checked if tokens are valid: true, expires at: 1749799749868
+[debug] [2025-06-13T06:30:47.070Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/avid-stratum-458105-m6:testIamPermissions [none]
+[debug] [2025-06-13T06:30:47.070Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/avid-stratum-458105-m6:testIamPermissions x-goog-quota-user=projects/avid-stratum-458105-m6
+[debug] [2025-06-13T06:30:47.070Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/avid-stratum-458105-m6:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-06-13T06:30:48.759Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/avid-stratum-458105-m6:testIamPermissions 200
+[debug] [2025-06-13T06:30:48.759Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/avid-stratum-458105-m6:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-06-13T06:30:48.760Z] Checked if tokens are valid: true, expires at: 1749799749868
+[debug] [2025-06-13T06:30:48.760Z] Checked if tokens are valid: true, expires at: 1749799749868
+[debug] [2025-06-13T06:30:48.760Z] Checked if tokens are valid: true, expires at: 1749799749868
+[debug] [2025-06-13T06:30:48.760Z] Checked if tokens are valid: true, expires at: 1749799749868
+[debug] [2025-06-13T06:30:48.760Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/avid-stratum-458105-m6/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-06-13T06:30:48.760Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/avid-stratum-458105-m6/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/avid-stratum-458105-m6
+[debug] [2025-06-13T06:30:48.761Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/avid-stratum-458105-m6/services/runtimeconfig.googleapis.com [none]
+[debug] [2025-06-13T06:30:48.761Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/avid-stratum-458105-m6/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/avid-stratum-458105-m6
+[debug] [2025-06-13T06:30:50.822Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/avid-stratum-458105-m6/services/runtimeconfig.googleapis.com 200
+[debug] [2025-06-13T06:30:50.822Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/avid-stratum-458105-m6/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2025-06-13T06:30:50.866Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/avid-stratum-458105-m6/services/cloudfunctions.googleapis.com 200
+[debug] [2025-06-13T06:30:50.866Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/avid-stratum-458105-m6/services/cloudfunctions.googleapis.com [omitted]
+[info] Let's create a new codebase for your functions.
+[info] A directory corresponding to the codebase will be created in your project
+[info] with sample code pre-configured.
+
+[info] See https://firebase.google.com/docs/functions/organize-functions for
+[info] more information on organizing your functions using codebases.
+
+[info] Functions can be deployed with firebase deploy.
+
+[info] +  Wrote functions/requirements.txt 
+[info] +  Wrote functions/.gitignore 
+[info] +  Wrote functions/main.py 
+[debug] [2025-06-13T06:31:19.870Z] Running command with virtualenv: command="D:\Projects\ai agent\Future-self planner\functions\venv\Scripts\activate.bat", args=["","&&","pip3","install","--upgrade","pip"]
+[debug] [2025-06-13T06:31:21.823Z] Error: spawn "D:\Projects\ai agent\Future-self planner\functions\venv\Scripts\activate.bat" ENOENT
+    at notFoundError (C:\Users\choud\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\cross-spawn\lib\enoent.js:6:26)
+    at verifyENOENT (C:\Users\choud\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\cross-spawn\lib\enoent.js:40:16)
+    at cp.emit (C:\Users\choud\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\cross-spawn\lib\enoent.js:27:25)
+    at ChildProcess._handle.onexit (node:internal/child_process:293:12)
+    at Process.callbackTrampoline (node:internal/async_hooks:130:17)
+[error] 
+[error] Error: An unexpected error has occurred.

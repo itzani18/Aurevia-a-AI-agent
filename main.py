@@ -161,7 +161,17 @@ elif st.session_state.page == "chat":
         switch_page("login")
     uid = user['localId']
     user_info = get_user_info(uid)
-    st.success(f"Welcome, {user_info['name']} ({user_info['phone']})")
+    if not user_info:
+        st.error("User info not found in database. Please log out and sign up again, or contact support.")
+        if st.button("Logout and go to Login"):
+            for k in ["user", "page"]:
+                if k in st.session_state:
+                    del st.session_state[k]
+            st.rerun()
+        st.stop()
+    else:
+        st.success(f"Welcome, {user_info['name']} ({user_info['phone']})")
+
 
     if "goto_new_chat" not in st.session_state:
         st.session_state.goto_new_chat = None

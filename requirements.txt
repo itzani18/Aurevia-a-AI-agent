@@ -13,3 +13,4 @@ google-generativeai
 twilio
 pyrebase4
 dotenv
+pyttsx3
